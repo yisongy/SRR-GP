@@ -1,4 +1,4 @@
-
+[![DOI](https://zenodo.org/badge/530613952.svg)](https://zenodo.org/badge/latestdoi/530613952)
 
 # Artifact for the Paper "Evolving Ranking-Based Failure Proximities for Better Clustering in Fault Isolation"
 
