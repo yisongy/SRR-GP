@@ -1,0 +1,70 @@
+This directory contains subdirectories which contain
+the test plans for each version of the subject.
+
+Usually, test plans developed for the first few
+versions are inherited by later versions of the
+subject.  
+
+Notes about specific testplans:
+
+v0 --->	sed can be described as a simple stream
+	text editor.  It serves as an invaluable
+	utility to users wanting to make quick
+	and easy scripts to make simple (but
+	yet often quite complex) edits across
+	one or many files.  The utility's
+	functionality can be divided into two
+	main areas:  its stream editing capabilities
+	and its regular expression matching.
+
+	With sed v0 (sed-1.17), the subject preparers 
+	focused on testing the stream editing functions
+	of the program.
+
+	That is not to say that regular expressions
+	are ignored.  They are not, however, the
+	focus of the suite.  The regex functions
+	of sed follow the POSIX standard.  It was
+	considered too cost-ineffective to develop
+	a test suite capable of systematically
+	testing "all" of sed's regex capabilities.
+
+	If you desire, inspect the
+	/originals/sed-v4.1.5/testsuite directory
+	for a look at how the code's authors
+	setup several suites (each of several
+	hundred tests) to test regex functions.
+
+v1 --->	sed v1 (sed-1.18) inherits the testplans
+	from sed v0.  There was very little
+	difference between these two versions, and
+	therefore, no need to re-evaluate the TSL.
+
+v2 ---> sed v2 (sed-2.05) is the first version
+	with significant changes in code structure.
+	Once again, however, there was no significant
+	change necessary for the subject's TSL spec.
+	because the fundamental characteristics and
+	properties of 'sed' itself had not changed.
+
+v3 --->	sed v3 (sed-3.01) is a demonstrates a relatively
+	minor reorganization of the source code.
+	Feature changes are minor.  This version
+	addressed compiler/cross-platform bugs that
+	existed at the time.  Hence, the TSL is recycled
+	for this version.
+
+v4 ---> sed v4 (sed-3.02) also inherts the old testplan
+	thanks to very few differences in code compared
+	to v3.
+
+v5 ---> sed v5 (sed-4.0.6) finally adds some significant
+	functional changes.  Therefore, the TSL spec.
+	must be expanded to test these changes. v5_0.tsl
+	incorporates these additions.
+
+v6 ---> sed v6 (sed-4.0.7) does not differ greatly from
+	v5 and thus inherits its testplan.
+
+v7 ---> sed v7 (sed-4.1.5) inherits the testplan from
+	the previous two versions. 

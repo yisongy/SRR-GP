@@ -1,0 +1,430 @@
+------ sed 2.05 ------
+
+Wed May 11 07:46:24 1994  Chip Salzenberg  (chip@fin.uucp)
+
+	* sed.c (compile_address): Recognize numeric addresses.
+	Fixes typo made during installation of "~" feature.
+
+------ sed 2.04 ------
+
+Sat Apr 30 17:17:38 1994  Tom Lord  (lord@x1.cygnus.com)
+        * sed.c: applied a patch from 
+	   From: kap1@tao.cpe.uchicago.edu (Dietrich Kappe)
+
+	   Dietrich writes:
+
+	   As my contribution to the creeping feature creature in sed,
+	   here is a new type of address. The address has form n~m,
+	   which means "the line number is equal to n modulo m." The
+	   modifications to sed are trivial, and the general
+	   usefulness of this address should be obvious. If m is 0 or
+	   missing, 1 is used in its place (could be a bug or a
+	   feature :-).
+
+Sat Apr 30 17:17:38 1994  Tom Lord  (lord@x1.cygnus.com)
+
+	* rx.c (solve_destination): protect `solution' more carefully.
+	This is a cleanup of a patch from Kevin Buettner
+	   (kev@cujo.geg.mot.com).
+
+Sat Apr 30 17:17:38 1994  Tom Lord  (lord@x1.cygnus.com)
+
+	* rx.c: make translation tables unsigned chars
+
+	* sed.c (main): Compile accumulated -e commands as
+	soon as a -f command comes along.  This ensures that
+	the commands are executed in the right order.
+
+Mon Oct 25 14:41:47 1993  Tom Lord  (lord@rtl.cygnus.com)
+
+	* sed.c (execute_program): 'w' flushes the buffer after it
+	writes -- diagnosed by doug@research.att.com.  'r' and 'w' to
+	the same file is now supported -- hopefully even in a way that
+	satisfies Posix (it now behaves differently from some
+	/bin/sed's and the spec is hard to read so i'm not sure).
+
+	Also, 'r' of a non-existent file is now permitted.
+
+Mon Oct 11 21:06:10 1993  Tom Lord  (lord@cygnus.com)
+
+	* sed.c (execute_program): remember that 'b' and 't' are more
+	like longjmp than goto.  Patch from tom@basil.icce.rug.nl (Tom
+	R.Hageman) 
+
+	* rx.c: patch from From: fin!chip@rutgers.edu (Chip
+	Salzenberg) to get rid of compiler warnings.
+
+
+------ sed 2.03 ------
+
+Sat Aug  7 01:04:59 1993  Tom Lord  (lord@unix7.andrew.cmu.edu)
+
+	* sed.c (compile_regex): report error messages for bogus
+	regexps.
+
+	SEE ALSO:  ChangeLog.rx
+
+
+------ no version information ------
+
+Wed Jul 21 00:28:03 1993  Tom Lord  (lord@unix8.andrew.cmu.edu)
+
+	* alloca.c: upgraded to a more recent version
+
+	* rx.c (re_search_2): prefer matches with longer
+	subexpressions to those with shorter ones, giving precedence
+	to low numbered subexpressions.
+
+	* rx.c (re_compile): don't free `params' if its null.
+
+Fri Jul 16 01:12:08 1993  Tom Lord  (lord@unix8.andrew.cmu.edu)
+
+	* rx.[ch], sed.c: rx replaces regex.
+
+
+
+Thu May 27 11:13:03 1993  Tom Lord  (lord@unix3.andrew.cmu.edu)
+
+	* sed.c (execute_program, match_addr): caught more cases
+	that need to be sensitive to a missing \n at EOF.
+
+Fri May 21 00:39:22 1993  Tom Lord  (lord@unix8.andrew.cmu.edu)
+
+	* sed.c (execute_program): apply gaumondp's patch
+	  to fix '\xabcxs/foo/bar/'.
+
+	* sed.c (execute_program):
+	  If a second address is a regexp, never match it on the
+	  same line as the first address.
+	  
+	* sed.c (compile_regexp): 
+	  Numeric ranges  x,y s.t. y < x are now treated as x,x.
+	  There was a bug in that they were being handled like x,x+1.
+
+	* sed.c (execute_program, read_pattern_space,
+	  append_pattern_space) don't add newlines to lines
+	  that don't have them.
+
+Wed May 19 13:34:45 1993  Tom Lord  (lord@unix9.andrew.cmu.edu)
+
+	* sed.c (compile_program): grok \\n in comments.
+
+Mon May 17 16:34:50 1993  Tom Lord  (lord@unix9.andrew.cmu.edu)
+
+	* alloca.c: new (standard) file
+
+	* configure.in: AC_CONSTified
+
+	* sed.c (compile_program): properly diagnose the error of
+	a missing command (e.g. sed /x/). (thanks gaumondp)
+
+	* sed.c (compile_regexp): handle character classes correctly.
+	Thanks gaumondp@ERE.UMontreal.CA
+	and  schwab@issan.informatik.uni-dortmund.de.
+
+Thu May  6 12:37:18 1993  Tom Lord  (lord@unix10.andrew.cmu.edu)
+
+	* sed.c (compile_filename, execute_program): don't use
+	`access' or `/dev/null'.
+
+	* sed.c (execute_program): 'N' at EOF should delete the pat buf.
+
+	* sed.c (compile_filename): truncate, don't append files
+	being openned for `w' or `s///w'
+
+	* sed.c (execute_program): -n switch shouldn't effect `i' or `c'.
+
+	* sed.c (compile_program): don't compile unescaped newlines
+	into the substitution string of an `s' command (they are an error).
+
+	* sed.c (compile_regex): correctly skip over character
+	sets that contain `]'.
+
+	* sed.c (execute_program): patch from gaumondp
+	Correctly handle empty-string matches in the case of an `s'
+	command with a repeat count.
+
+	* sed.c (compile_program): patch from gaumondp@ere.UMontreal.ca.
+	Don't consume characters after the label of a `b', `t' or `:' command.
+
+	* sed.c (compile_program): unmatched open braces are an error.
+
+	* sed.c (compile_file): when consuming an initial comment,
+	count lines correctly.
+
+Wed Nov 18 02:10:58 1992  Tom Lord  (lord@unix2.andrew.cmu.edu)
+
+	* sed.c (execute_program): Made s///p print even if -n was
+	specified.
+
+	* sed.c (compile_string): Changed the type of this function to
+	fix a compile warning.
+
+Wed Nov  4 17:15:34 1992  Tom Lord  (lord@unix7.andrew.cmu.edu)
+
+	* sed.c (main): Initialize the hold area to contain "\n"
+	instead of "".  In execute_program, all lines are expected
+	to be newline terminated.  Also, if H is the first command
+	in the script, the result is a pattern buffer that begins
+	with a blank line.  Thanks to pinard@iro.umontreal.ca
+	(Francois Pinard) for pointing out this and many other bugs.
+
+	* sed.c (execute_program): Fixed a case of `D' command.
+	  Thanks Chris Weber <weber@bucknell.edu>
+
+	* sed.c: added new tests of no_default_output to make -n work.
+	  Thanks Andrew Herbert <andrew@werple.apana.org.au>
+
+	* sed.c, configure.in,Makefile.in: autoconfed bcopy and const.
+	  Thanks "J.T. Conklin" <jtc@gain.com>
+
+	* sed.c: made prog_cur, prog_start, and prog_end unsigned so
+	that users could write  `sed -e s/ÿ/foo/g'.
+
+Tue Oct 13 00:04:05 1992  Tom Lord  (lord@unix3.andrew.cmu.edu)
+
+	* sed.c (execute_program): fixed the cycling behavior of 'D'
+
+	* sed.c: integrated patch that closes files
+
+	* sed.c: changed regexp syntax
+
+Fri May 22 15:11:12 1992  Tom Lord  (lord at moriarty.bh.andrew.cmu.edu)
+
+	* regex.c:  this is not my change, but a pointer to the fact
+	that karl@gnu fixed some regexp bugs that were plaguing sed.
+
+Thu Apr 30 13:02:21 1992  Tom Lord  (lord at unix3.andrew.cmu.edu)
+
+	* sed.c (compile_program, execute_program)
+	subprograms are now compiled with an explicit continuation ;)
+	return_v and return_i in struct vector.  execute_program
+	no longer recurses to execute subprograms (case '{') and now
+	understands a return instruction (case '{').
+
+Tue Apr 28 17:13:04 1992  Tom Lord  (lord at unix7.andrew.cmu.edu)
+
+	* sed.c (compile_address) added \?regexp? syntax for addresses.
+
+	* sed.c (main) added {} intervals to the obscure regexp
+	  syntax.
+
+	* sed.c (compile_program)  after calling compile_address,
+	  normalize numeric addresses (make a2.addr_number > a1.addr_number).
+	  This is necessary because line numbers must match exactly, 
+	  but sed does not try to match a2 until after a1 has matched,
+	  yet a1,a2 where a2 <= a1 is defined to be equivelent to
+	  a1,a1+1
+
+Sat Feb 29 10:55:54 1992  David J. MacKenzie  (djm@nutrimat)
+
+	* sed.c (usage): Document long options as starting with `--'.
+
+Mon Dec  9 23:56:40 1991  David J. MacKenzie  (djm at wookumz.gnu.ai.mit.edu)
+
+	* sed.c: Include sys/types.h, for new regex.h.
+
+Tue Nov  5 02:16:01 1991  David J. MacKenzie  (djm at wookumz.gnu.ai.mit.edu)
+
+	* utils.c: Change NO_VFPRINTF to VPRINTF_MISSING, for
+	compatibility with autoconf.
+
+Mon Sep  2 22:02:40 1991  David J. MacKenzie  (djm at apple-gunkies)
+
+	* sed.c (compile_regex): Treat \ as a normal character when in
+	a char class.
+
+Thu Aug  8 00:15:33 1991  David J. MacKenzie  (djm at bleen)
+
+	* Version 1.08.
+
+	* sed.c (compile_filename): If reading a file fails, read
+	/dev/null instead.  It's what Unix and POSIX do, effectively.
+
+	* sed.c (compile_regex): The 'slash' character doesn't
+	terminate the regex if it's in a character class.
+
+	* sed.c (main): If given no args, or bad option, print usage
+	message.
+	(usage): New function.
+
+	* sed.c (execute_program): Amount written for 'P' command was
+	wrong.  From stephend@ksr.com (Stephen Davis).
+
+Wed Aug  7 16:51:14 1991  David J. MacKenzie  (djm at apple-gunkies)
+
+	* sed.c (append_pattern_space): Check for buffer full before
+	instead of after writing to buffer.  Don't need to test for
+	EOF initially anymore, due to the next change.
+	(execute_program): For 'n' and 'N' commands, if eof is reached
+	in input, quit the script like Unix sed does.
+	Fix memory allocation problems for 'a' and 'r' commands.
+	(compile_program): Fix off by one error in processing comments.
+	All of the above are from Tapani Tarvainen, tarvaine@tukki.jyu.fi.
+
+	* sed.c (setup_jump): Use isblank instead of testing for ' '
+	or '\t', for POSIX locales.
+
+	* utils.c (ck_strdup): Renamed from strdup.
+	* sed.c: Change callers.
+
+	* sed.c, utils.c: Clean up declarations and includes to get
+	rid of compiler warnings.
+
+	* sed.c (main): Add long-named options.  Don't complain if -n
+	is given twice.
+
+Fri Aug  2 12:33:16 1991  David J. MacKenzie  (djm at apple-gunkies)
+
+	* configure: Support +srcdir arg.  Create config.status and
+	remove it and Makefile if interrupted while creating them.
+	* Makefile.in: Change DESTDIR to prefix.
+
+Mon Jul 15 13:07:39 1991  David J. MacKenzie  (djm at wookumz.gnu.ai.mit.edu)
+
+	* sed.c (main): Add -V option to print version number.
+	(USAGE): Mention -V.
+
+Mon Jul  8 01:42:22 1991  David J. MacKenzie  (djm at geech.gnu.ai.mit.edu)
+
+	* sed.c: Define bcopy in terms of memcpy if STDC_HEADERS as
+	well as if USG.
+	(compile_filename): Don't glob filename (for 'r' and 'w'
+	commands).  Unix sed doesn't do it and it's not very useful,
+	since it can only match 0 or 1 files.
+	(execute_program): Change '\a' to 007 since some compilers
+	don't recognize \a.
+	* utils.c: New file; code moved from sed.c.
+	* Replace Makefile with Makefile.in and configure.
+	Update README.
+
+Tue Mar 26 13:00:48 EST 1991	Jay Fenlason (hack@gnu.ai.mit.edu)
+
+	* sed.c (match_address)  Added a trivial cast for portability.
+
+Mon Feb 25 13:23:29 EST 1991	Jay Fenlason (hack@ai.mit.edu)
+
+	* sed.c  Changed 's' command to work with latest version of regex()
+	routines, which mysteriously changed somewhere in there. . .
+	A one-line patch from David Eckelkamp (eckelkamp@mcc.com).
+
+	Initialize the fastmap in the hopes that it'll make sed faster.
+
+Thu Feb 21 13:42:27 EST 1991	Jay Fenlason (hack@ai.mti.edu)
+
+	* sed.c Change panic to compile with other __STDC__ compilers.
+
+Wed Jan 30 10:46:38 EST 1991	Jay Fenlason (hack@ai.mit.edu)
+
+	* sed.c  Changed version number.  Made new release.
+
+Tue Nov 27 15:34:51 EST 1990	Jay Fenlason (hack@ai.mit.edu)
+
+	* sed.c (setup_jump)  Don't blow chunks if there isn't a label
+	after a b or t command.
+
+		(main) Don't panic if it a branch command doesn't have
+	a label to branch to.
+
+		(main)  Collect all the -e arguments together and parse them
+	all at once.  This way, -e { -e mumble -e } will work.
+
+	All these small patches from David Schmidt (davids@isc-br.isc-br.com)
+
+Tue Sep 11 12:51:37 EDT 1990	Jay Fenlason (hack@ai.mit.edu)
+
+	* sed.c Changed some function forward declarations to use VOID *
+	instead of char *
+
+Mon Jul 16 11:12:54 EDT 1990 Jay Fenlason (hack@ai.mit.edu)
+
+	* sed.c (ck_malloc)  Use malloc(1) instead of malloc(0) if given
+	a request for zero bytes.
+
+Tue Jun  5 02:05:37 1990  David J. MacKenzie  (djm at albert.ai.mit.edu)
+
+	* sed.c: Remove excess newlines from calls to panic.
+	Reformat some comments to fit in 79 columns.
+	Base whether to use void * on __STDC__, not __GNU__.
+	(main): Add missing arg when printing usage message.
+	Print usage if given invalid arg.
+	(panic) [__STDC__]: Add missing ", ...".
+	(compile_filename): Print correct error message if glob_filename
+	returns NULL.
+
+Thu Apr  5 21:41:12 1990  Jim Kingdon  (kingdon at pogo.ai.mit.edu)
+
+	* sed.c (execute_program, case 'r'): When need to realloc append.text,
+	multiply append.alloc by 2 instead of adding
+	cur_cmd->x.cmd_txt.text_len.
+
+Tue Mar  6 15:55:35 EST 1990 Jay Fenlason (hack@ai.mit.edu)
+
+	* sed.c (compile_regex)  Allocate 10 bytes extra space needed by
+	re_compile_pattern.
+
+Sun Feb 25 16:32:10 1990  Jim Kingdon  (kingdon at pogo.ai.mit.edu)
+
+	* sed.c (execute_program, case 'l'): Print \00 instead of \0.
+	Print backslash as \\ not \.
+	Print \xx instead of /xx.
+
+Thu Feb  1 14:02:28 EST 1990		hack@wookumz
+
+	* sed.c (memchr)  Use () inside inner loop so it will work correctly.
+	A two character patch from Robert A Bruce (rab@allspice.berkeley.edu)
+
+Wed Sep 27 18:47:39 EDT 1989		hack@ai.mit.edu
+
+	* sed.c (compile_regex)  New function.  When compiling regex,
+	turn ^ into \` and $ into \' so that they won't match on embedded
+	newlines.  UN*X	pattern matching is a crock.
+	(compile_program, compile_address) call compile_regex.
+
+Mon Sep 18 10:15:32 EDT 1989		hack@ai.mit.edu
+
+	* sed.c (compile_program):  define translate as unsigned char * so
+	that y command will work on non-ascii characters.
+
+	Changed version number to 1.06.
+
+Thu Sep 14 15:57:08 EDT 1989		hack@ai.mit.edu
+
+	* sed.c  (compile_program)  Let programs use ; to terminate } as
+	well as newline.
+
+	(read_file) Print an error msg to stderr if it can't open an
+ 	input file.
+
+Thu Mar 23 18:04:46 1989  Randall Smith  (randy at apple-gunkies.ai.mit.edu)
+
+	* Makefile, sed.c: Added new copyright notice.
+
+	* Makefile: Make distributions which follow the symlinks.
+
+hack@ai.mit.edu
+
+	1.05	Fixed error in 'r' (now does things in the right order)
+
+	1.04	Fixed s/re/rep/[number]
+
+	1.03	Fixes from Mike Haertel for regexps that match the
+		empty string, and for Ritchie stdio (non-sticky EOF)
+
+	1.02	Fixed 't', 'b', ':' to trim leading spaces and tabs
+		Fixed \\ in replacement of 's' command
+		Added comments
+
+	1.01	Added s/re/rep/[digits]
+		added #n as first line of script
+		added filename globbing
+		added 'l' command
+		All in the name of POSIX
+
+	1.00	Began (thinking about) distributing this file
+
+Local Variables:
+mode: indented-text
+left-margin: 8
+version-control: never
+End:

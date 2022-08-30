@@ -1,0 +1,124 @@
+#Test specification for sed v0
+
+#command line arguments for sed
+Parameter - options:
+        output control:
+                -n, --quiet, --silent (quiet output).   [property Suppress]
+                none.                                   [property NoSuppress]
+
+        version:
+                -V.                                     [single]
+
+        command source:
+		no occurance.				[single]
+                -e, one occurance.                      [property Command]
+                -e, multiple occurances.                [single]
+                -f, one occurance.                      [property Script]
+                -f, multiple occurances.                [single]
+		-e and -f, both command and script.	[single]
+
+	other:
+		-i, NO backup.				[single]
+		-i, YES backup.				[single]
+		-l N, (linewrap for 'l' command).	[single]
+		-s, seperate streams.			[single]
+		-r, extended regexp.			[single]
+		-u, unbuffered input/output.		[single]
+		-rsul, option orgy			[single]
+
+#partition of input sources
+Parameter - commands:
+        script type:
+                single script file.                     [if Script]
+		no script file.              		[error]
+		single sed command.			[if Command] 
+		no sed command.				[error]
+		blank sed command.			[single]
+
+        script file:
+                file exists.                            [if Script] [property ScriptFile_Exist]
+                file does not exist.                    [error]
+                omitted.                                [error]
+
+#partition of various commands
+Parameter - editing commands:
+        manipulations:
+                delete (d).                             [property delete, P_Flaggable]
+		Delete (D).				[if Script] [property Delete, P_Flaggable]
+                substitute (s).                         [property Substitute, G_Flaggable, P_Flaggable]
+                append (a).                             [if Script] [property Append, P_Flaggable]
+                insert (i).                             [if Script] [property Insert, P_Flaggable]
+                change (c).                             [if Script] [property Change, P_Flaggable]
+                list (l).                               [if Script] [property List]
+                transform (y).                          [if Script] [property Transform, P_Flaggable]
+                file read (r file). 			[if Script] [property Read]
+                file write (w file). 			[if Script] [property Write] 
+                quit (q).				[if Script] [property Quit] 
+
+        flags and options:
+                global (g):
+                        global on.                      [if G_Flaggable] [property Global_ON]
+                        global off.                     [property Global_OFF]
+
+                print (p, P):
+                        print on.                       [if Suppress && P_Flaggable] [property print_ON]
+                        print off.                      [if NoSuppress] [property print_OFF]
+			Print on.			[if Script && Suppress && P_Flaggable] [property Print_ON]
+			Print off.			[if Script && Suppress && P_Flaggable] [property Print_OFF]
+
+                nth occurance (n):
+                        nth on.                         [if Substitute] [property Nth_ON]
+                        nth off.                        [propety Nth_OFF]
+
+		write to file flag (w):
+			write to file on.		[if Substitute] [property w_ON]
+			write to file off.		[property w_OFF]
+
+		next (n, N):
+			next on.			[if Script] [property next_ON]		
+			next off.			[if Script] [property next_OFF]
+			Next on.			[if Script] [property Next_ON]
+			Next off.			[if Script] [property Next_ON]
+
+		print line num (=):
+			print line on.			[if Script] [property Line_ON]
+			print line off.			[if Script] [property Line_OFF]
+		
+		hold (h/H) and get (g/G):
+			no hold/Hold.			[if Script]
+			hold/get.			[single]
+			hold/Get.			[single]
+			Hold/get.			[single]
+			Hold/Get.			[single]
+			hold/get w/ swap (x). 		[single]
+		
+		control flow:
+			no control flow.		[if Script]
+			branch (b label).		[single]
+			test (t label).			[single]
+			branch & test.			[single]
+
+	address:
+                is required.                            [if delete || Delete || next_ON || Next_ON || Print_ON || print_ON || Append || Insert || Change || Transform]
+								[property AddrRequired]
+                does not apply.                         [if List] [property AddrN/A]
+
+#partition of input file states
+Parameter - input file:
+        input file:
+                file exists.                            
+                file does not exist.                    [error]
+
+        number of input file(s):
+                none.                                   [error]
+                single file.                            
+                multiple files.                         [single]                         
+
+	line length:
+		>4000 bytes.				[error]
+		(0-4000) bytes.	
+	
+        file type:
+                binary file.                            [single]
+                text file.                              [property InFile_Good]
+

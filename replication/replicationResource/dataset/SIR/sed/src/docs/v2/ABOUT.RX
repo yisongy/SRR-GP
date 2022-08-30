@@ -1,0 +1,23 @@
+
+Rx is found in the files `rx.h' and `rx.c'.  It is an upward
+compatable replacement for GNU regex.  If you want to try GNU Rx in
+your own application, the documentation for GNU _regex_ will tell you
+how.
+
+Notes:
+
+* This release of Rx is not quite ready for use in GNU Emacs.
+
+* When initializing a variable of type `struct re_pattern_buf',
+  use `bzero' or an equivelent function first.  Some older code
+  might try to work by assigning 0 to specific fields defined in 
+  GNU regex.  All of those fields still exist, but new fields have
+  been added (and more may be in the future).
+
+* Rx keeps a cache of information about patterns.  The size of this
+  cache may effect performance.  The default size should be large
+  enough for most applications.  However, for a program like `sed',
+  there is no reason to keep the cache small.  Such programs want to
+  assign as large a number as possible without thrashing (see main in
+  sed.c for example).
+

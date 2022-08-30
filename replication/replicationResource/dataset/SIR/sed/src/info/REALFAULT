@@ -1,0 +1,103 @@
+The smoke tests described in other parts of this repository
+are very important to us:  Some of these tests reveal
+"true" (i.e. not intentionally embedded) faults.
+
+Herein we shall discuss some of the specifics of these
+tests and their associated faults.
+
+Due to time constraints, the .c code causing these
+true faults was not investigated.  We should also note that,
+because the testsuite came from the "newest" version of
+sed (sed-4.1.5 -> v7), any feature changes or feature adds
+are of course ignored in this analysis.
+
+Only tests which would map to the same general functional
+requirements across ALL our available versions (v0 through
+v7) are considered.  For example, the latest versions have
+extended command-line parameters which are not tested here.
+
+Fault severities range from a (1) catastrophic failure, 
+(2) "normal" and (3) cosmetic (i.e. output format diff-
+erences)
+
+v0:
+(1) dc.sed, noeol.sed, xemacs.sed
+(2) 0range.sed, 8to7.sed, classes.sed, cv-vars.sed
+    distrib.sed, eval.sed, factor.sed, flipcase.sed
+    insens.sed, middle.sed, modulo.sed, numsub*.sed
+    space.sed, xbxcx3.sed
+
+Totals: 21 tests fail, 8 likely faults*
+
+v1:
+(1) dc.sed, noeol.sed, xemacs.sed
+(2) 0range.sed, 8to7.sed, classes.sed, cv-vars.sed
+    distrib.sed, eval.sed, factor.sed, flipcase.sed
+    insens.sed, middle.sed, modulo.sed, numsub*.sed
+    space.sed, xbxcx3.sed
+
+Totals: 21 tests fail, 8 likely faults*
+
+v2:
+(1) dc.sed, noeol.sed, xemacs.sed, madding.sed
+(2) 0range.sed, 8to7.sed, classes.sed, cv-vars.sed
+    distrib.sed, eval.sed, factor.sed, flipcase.sed
+    insens.sed, middle.sed, modulo.sed, numsub*.sed
+    space.sed, xbxcx3.sed
+
+Totals: 22 tests fail, 9 likely faults*
+
+v3:
+(2) 0range.sed, appquit.sed, classes.sed, cv-vars.sed
+    dc.sed, distrib.sed, eval.sed, factor.sed,
+    flipcase.sed, insens.sed, middle.sed, numsub*.sed
+    space.sed, xbxcx3.sed
+
+Totals: 18 tests fail, 5 likely faults*
+
+v4:
+(2) 0range.sed, appquit.sed, classes.sed, cv-vars.sed
+    dc.sed, distrib.sed, eval.sed, factor.sed,
+    flipcase.sed, insens.sed, middle.sed, numsub*.sed
+    space.sed, xbxcx3.sed
+
+Totals: 18 tests fail, 5 likely faults*
+
+v5:
+(2) appquit.sed, classes.sed, cv-vars.sed, dc.sed, 
+    distrib.sed, eval.sed, factor.sed, flipcase.sed, 
+    insens.sed, middle.sed, numsub[2-5].sed, readin.sed
+    space.sed, xbxcx3.sed
+
+Totals: 17 tests fail, 4 likely faults*
+
+v6: 
+(2) appquit.sed, classes.sed, cv-vars.sed, dc.sed,
+    distrib.sed, eval.sed, factor.sed, insens.sed
+    middle.sed, numsub[2-5].sed, readin.sed, space.sed
+    
+
+Totals: 15 tests fail, 2 likely faults*
+
+v7:
+(2) classes.sed, cv-vars.sed, dc.sed, distrib.sed,
+    eval.sed, factor.sed, insens.sed, middle.sed
+    numsub[2-5].sed, readin.sed
+
+Totals:  13 tests fail, 0 likely faults*
+
+-----------------------------------------------------------
+* The number of likely "real" faults was determined
+  by subtracting the number of tests failing in v7
+  from the total failing tests for the particular
+  version.  It's worth noting that if we had used
+  the sed author's custom makefiles, scripts, and
+  *.c programs to run the automated suite, we would
+  see 0 faults in v7.
+
+  We are lead to believe that these 13 failing tests
+  are the result of our build and runtime environments
+  not reflecting those used in the automated suite
+  provided by sed.  Recall that we simply extracted
+  the inputs and outputs and are comparing those with
+  the tools provided by SIR.

@@ -1,0 +1,18 @@
+GNU sed 3.01 is now available.
+
+Copies can be obtained by ftp from prep.ai.mit.edu:/pub/gnu/sed-3.01.tar.gz
+and from other sites (see the list of mirror sites at the end of
+this message).
+
+Sed is a "stream editor" -- used for scripted data transformations,
+such as transforming a data stream within a pipeline.
+
+This version is more Posixly Correct and has more reliable performance
+than the 2.05 and older versions of GNU sed.  It should also be more
+portable to unusual computer systems.  All known bugs except regular
+expression performance (which, though better, still needs a fair bit
+of work) have been fixed.
+
+Please report bugs to bug-gnu-utils@gnu.org; please include the word
+``sed'' somewhere in the Subject: line.
+

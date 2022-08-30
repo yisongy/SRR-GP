@@ -1,0 +1,13 @@
+This directory is used as a staging area from which
+to run the test suite.
+
+The default runall and runall-diff scripts should
+be placed here.
+
+There are some tests in the smoke test suite
+which require several (10-30) seconds time to
+execute.  If you want to learn more about the standard
+and smoke test suites, please read the CONTENTS
+and README files in the testplans.alt or inputs 
+directory.
+

@@ -1,0 +1,10 @@
+The v0 through vK subdirectories contain the "official"
+documents provided with the different releases of sed SIR
+has chosen to use in its repository.
+
+Documentation for older versions of sed can be obtained by 
+contacting The GNU Foundation.
+
+The other ALLCAPS files located in the /originals directory 
+can be very helpful for finding interesting and detailed 
+information about the various versions of sed.

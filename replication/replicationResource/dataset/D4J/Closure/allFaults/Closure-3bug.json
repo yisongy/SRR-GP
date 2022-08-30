@@ -1,0 +1,100 @@
+{
+    "Closure4b-Closure5b-Closure6b": {
+        "coverage": "/home/Defects4J/data/Closure-4b-5b-6b.pkl",
+        "failing_tests": {
+            "Closure4b": "/home/Defects4J/resources/failing_tests/Closure/4",
+            "Closure5b": "/home/Defects4J/resources/failing_tests/Closure/5",
+            "Closure6b": "/home/Defects4J/resources/failing_tests/Closure/6"
+        },
+        "faulty_components": {
+            "Closure4b": "/home/Defects4J/resources/faulty_methods/Closure/4",
+            "Closure5b": "/home/Defects4J/resources/faulty_methods/Closure/5",
+            "Closure6b": "/home/Defects4J/resources/faulty_methods/Closure/6"
+        },
+        "faulty_components_level": 0
+    },
+    "Closure89b-Closure90b-Closure91b": {
+        "coverage": "/home/Defects4J/data/Closure-89b-90b-91b.pkl",
+        "failing_tests": {
+            "Closure89b": "/home/Defects4J/resources/failing_tests/Closure/89",
+            "Closure90b": "/home/Defects4J/resources/failing_tests/Closure/90",
+            "Closure91b": "/home/Defects4J/resources/failing_tests/Closure/91"
+        },
+        "faulty_components": {
+            "Closure89b": "/home/Defects4J/resources/faulty_methods/Closure/89",
+            "Closure90b": "/home/Defects4J/resources/faulty_methods/Closure/90",
+            "Closure91b": "/home/Defects4J/resources/faulty_methods/Closure/91"
+        },
+        "faulty_components_level": 0
+    },
+    "Closure108b-Closure109b-Closure110b": {
+        "coverage": "/home/Defects4J/data/Closure-108b-109b-110b.pkl",
+        "failing_tests": {
+            "Closure108b": "/home/Defects4J/resources/failing_tests/Closure/108",
+            "Closure109b": "/home/Defects4J/resources/failing_tests/Closure/109",
+            "Closure110b": "/home/Defects4J/resources/failing_tests/Closure/110"
+        },
+        "faulty_components": {
+            "Closure108b": "/home/Defects4J/resources/faulty_methods/Closure/108",
+            "Closure109b": "/home/Defects4J/resources/faulty_methods/Closure/109",
+            "Closure110b": "/home/Defects4J/resources/faulty_methods/Closure/110"
+        },
+        "faulty_components_level": 0
+    },
+    "Closure17b-Closure18b-Closure19b": {
+        "coverage": "/home/Defects4J/data/Closure-17b-18b-19b.pkl",
+        "failing_tests": {
+            "Closure17b": "/home/Defects4J/resources/failing_tests/Closure/17",
+            "Closure18b": "/home/Defects4J/resources/failing_tests/Closure/18",
+            "Closure19b": "/home/Defects4J/resources/failing_tests/Closure/19"
+        },
+        "faulty_components": {
+            "Closure17b": "/home/Defects4J/resources/faulty_methods/Closure/17",
+            "Closure18b": "/home/Defects4J/resources/faulty_methods/Closure/18",
+            "Closure19b": "/home/Defects4J/resources/faulty_methods/Closure/19"
+        },
+        "faulty_components_level": 0
+    },
+    "Closure87b-Closure88b-Closure89b": {
+        "coverage": "/home/Defects4J/data/Closure-87b-88b-89b.pkl",
+        "failing_tests": {
+            "Closure87b": "/home/Defects4J/resources/failing_tests/Closure/87",
+            "Closure88b": "/home/Defects4J/resources/failing_tests/Closure/88",
+            "Closure89b": "/home/Defects4J/resources/failing_tests/Closure/89"
+        },
+        "faulty_components": {
+            "Closure87b": "/home/Defects4J/resources/faulty_methods/Closure/87",
+            "Closure88b": "/home/Defects4J/resources/faulty_methods/Closure/88",
+            "Closure89b": "/home/Defects4J/resources/faulty_methods/Closure/89"
+        },
+        "faulty_components_level": 0
+    },
+    "Closure26b-Closure27b-Closure28b": {
+        "coverage": "/home/Defects4J/data/Closure-26b-27b-28b.pkl",
+        "failing_tests": {
+            "Closure26b": "/home/Defects4J/resources/failing_tests/Closure/26",
+            "Closure27b": "/home/Defects4J/resources/failing_tests/Closure/27",
+            "Closure28b": "/home/Defects4J/resources/failing_tests/Closure/28"
+        },
+        "faulty_components": {
+            "Closure26b": "/home/Defects4J/resources/faulty_methods/Closure/26",
+            "Closure27b": "/home/Defects4J/resources/faulty_methods/Closure/27",
+            "Closure28b": "/home/Defects4J/resources/faulty_methods/Closure/28"
+        },
+        "faulty_components_level": 0
+    },
+    "Closure8b-Closure9b-Closure10b": {
+        "coverage": "/home/Defects4J/data/Closure-8b-9b-10b.pkl",
+        "failing_tests": {
+            "Closure8b": "/home/Defects4J/resources/failing_tests/Closure/8",
+            "Closure9b": "/home/Defects4J/resources/failing_tests/Closure/9",
+            "Closure10b": "/home/Defects4J/resources/failing_tests/Closure/10"
+        },
+        "faulty_components": {
+            "Closure8b": "/home/Defects4J/resources/faulty_methods/Closure/8",
+            "Closure9b": "/home/Defects4J/resources/faulty_methods/Closure/9",
+            "Closure10b": "/home/Defects4J/resources/faulty_methods/Closure/10"
+        },
+        "faulty_components_level": 0
+    }
+}

@@ -1,0 +1,9 @@
+-P [-ne '/cat$/d;p' ../inputs/default.in] -C [t37: delete + print]
+-P [-ne 's/cat/CAT/gpw s38_0.wout' ../inputs/default.in] -F [s38_0.wout|s38.wout] -C [t38: sub + gpw]
+-P [-ne 's/cat/dog/gpw s39_0.wout' ../inputs/default.in] -F [s39_0.wout|s39.wout] -C [t39: sub + gpw + d]
+-P [-ne '1,23p; s/cat/CAT/gpw s40_0.wout' ../inputs/default.in] -F [s40_0.wout|s40.wout] -C [t40: sub + gpw + D]
+
+-P [-e '/cat$/d' ../inputs/default.in] -C [t249: delete + print]
+-P [-e 's/cat/CAT/gw s250_0.wout' ../inputs/default.in] -F [s250_0.wout|s250.wout] -C [t250: sub + gpw]
+-P [-e 's/cat/dog/gw s251_0.wout' ../inputs/default.in] -F [s251_0.wout|s251.wout] -C [t251: sub + gpw + d]
+-P [-e '1,5p; s/dog/DOG/gw s252_0.wout' ../inputs/default.in] -F [s252_0.wout|s252.wout] -C [t252: sub + gpw + D]

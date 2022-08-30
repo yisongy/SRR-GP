@@ -1,0 +1,20 @@
+cluster0_SingleA: RR = 0.01
+cluster0_SingleA: PR = 0.01
+cluster0_SingleA: JC = 0.43
+cluster0_SingleA: FMI = 0.6
+
+cluster1_SingleA: RR = 0.99
+cluster1_SingleA: PR = 1.0
+cluster1_SingleA: JC = 0.99
+cluster1_SingleA: FMI = 1.0
+
+cluster0_SingleB: RR = 0.6
+cluster0_SingleB: PR = 1.0
+cluster0_SingleB: JC = 0.48
+cluster0_SingleB: FMI = 0.65
+
+cluster1_SingleB: RR = 0.4
+cluster1_SingleB: PR = 0.79
+cluster1_SingleB: JC = 0.38
+cluster1_SingleB: FMI = 0.55
+

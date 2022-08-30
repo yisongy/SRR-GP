@@ -1,0 +1,18 @@
+v0_2.tsl the final revision .tsl file
+
+v0_2.universe is the second revision of the STImpL (universe) file used by
+	the mts program.  This is the default universe file for this version.
+
+v0_2.universe.single contains "hand-written" tests for single/error cases from the 
+	.frame file
+
+v0_2.universe.extra contains "hand-written" tests for difficult-to-generate tests 
+	from the .frame file
+
+v0_2.universe.smoke contains lines to execute the tests from the GNU sed creators'
+	testsuite.  Read about the scripts in the /inputs/scr/smoke dir.
+
+Other files are named according to the naming convention defined in the subject
+directory specification in the C handbook on the software-artifact infrastructure
+repository (http://esquared.unl.edu/sir)
+

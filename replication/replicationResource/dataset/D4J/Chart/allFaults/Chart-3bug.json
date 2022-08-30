@@ -1,0 +1,44 @@
+{
+    "Chart6b-Chart7b-Chart8b": {
+        "coverage": "/home/Defects4J/data/Chart-6b-7b-8b.pkl",
+        "failing_tests": {
+            "Chart6b": "/home/Defects4J/resources/failing_tests/Chart/6",
+            "Chart7b": "/home/Defects4J/resources/failing_tests/Chart/7",
+            "Chart8b": "/home/Defects4J/resources/failing_tests/Chart/8"
+        },
+        "faulty_components": {
+            "Chart6b": "/home/Defects4J/resources/faulty_methods/Chart/6",
+            "Chart7b": "/home/Defects4J/resources/faulty_methods/Chart/7",
+            "Chart8b": "/home/Defects4J/resources/faulty_methods/Chart/8"
+        },
+        "faulty_components_level": 0
+    },
+    "Chart16b-Chart17b-Chart18b": {
+        "coverage": "/home/Defects4J/data/Chart-16b-17b-18b.pkl",
+        "failing_tests": {
+            "Chart16b": "/home/Defects4J/resources/failing_tests/Chart/16",
+            "Chart17b": "/home/Defects4J/resources/failing_tests/Chart/17",
+            "Chart18b": "/home/Defects4J/resources/failing_tests/Chart/18"
+        },
+        "faulty_components": {
+            "Chart16b": "/home/Defects4J/resources/faulty_methods/Chart/16",
+            "Chart17b": "/home/Defects4J/resources/faulty_methods/Chart/17",
+            "Chart18b": "/home/Defects4J/resources/faulty_methods/Chart/18"
+        },
+        "faulty_components_level": 0
+    },
+    "Chart10b-Chart11b-Chart12b": {
+        "coverage": "/home/Defects4J/data/Chart-10b-11b-12b.pkl",
+        "failing_tests": {
+            "Chart10b": "/home/Defects4J/resources/failing_tests/Chart/10",
+            "Chart11b": "/home/Defects4J/resources/failing_tests/Chart/11",
+            "Chart12b": "/home/Defects4J/resources/failing_tests/Chart/12"
+        },
+        "faulty_components": {
+            "Chart10b": "/home/Defects4J/resources/faulty_methods/Chart/10",
+            "Chart11b": "/home/Defects4J/resources/faulty_methods/Chart/11",
+            "Chart12b": "/home/Defects4J/resources/faulty_methods/Chart/12"
+        },
+        "faulty_components_level": 0
+    }
+}

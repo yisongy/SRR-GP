@@ -1,0 +1,8 @@
+v5 of sed offers some new command line options.
+
+We therefore have added several new "single"
+tests to the main .tsl file.  Rather than re-
+running the tsl tool on this file and messing
+up the numbering for unchanged tests, we will
+simply append these tests to the end of those
+that exist in v4.

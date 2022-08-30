@@ -1,0 +1,122 @@
+{
+    "Time9b-Time10b": {
+        "coverage": "/home/Defects4J/data/Time-9b-10b.pkl",
+        "failing_tests": {
+            "Time9b": "/home/Defects4J/resources/failing_tests/Time/9",
+            "Time10b": "/home/Defects4J/resources/failing_tests/Time/10"
+        },
+        "faulty_components": {
+            "Time9b": "/home/Defects4J/resources/faulty_methods/Time/9",
+            "Time10b": "/home/Defects4J/resources/faulty_methods/Time/10"
+        },
+        "faulty_components_level": 0
+    },
+    "Time2b-Time3b": {
+        "coverage": "/home/Defects4J/data/Time-2b-3b.pkl",
+        "failing_tests": {
+            "Time2b": "/home/Defects4J/resources/failing_tests/Time/2",
+            "Time3b": "/home/Defects4J/resources/failing_tests/Time/3"
+        },
+        "faulty_components": {
+            "Time2b": "/home/Defects4J/resources/faulty_methods/Time/2",
+            "Time3b": "/home/Defects4J/resources/faulty_methods/Time/3"
+        },
+        "faulty_components_level": 0
+    },
+    "Time13b-Time14b": {
+        "coverage": "/home/Defects4J/data/Time-13b-14b.pkl",
+        "failing_tests": {
+            "Time13b": "/home/Defects4J/resources/failing_tests/Time/13",
+            "Time14b": "/home/Defects4J/resources/failing_tests/Time/14"
+        },
+        "faulty_components": {
+            "Time13b": "/home/Defects4J/resources/faulty_methods/Time/13",
+            "Time14b": "/home/Defects4J/resources/faulty_methods/Time/14"
+        },
+        "faulty_components_level": 0
+    },
+    "Time7b-Time8b": {
+        "coverage": "/home/Defects4J/data/Time-7b-8b.pkl",
+        "failing_tests": {
+            "Time7b": "/home/Defects4J/resources/failing_tests/Time/7",
+            "Time8b": "/home/Defects4J/resources/failing_tests/Time/8"
+        },
+        "faulty_components": {
+            "Time7b": "/home/Defects4J/resources/faulty_methods/Time/7",
+            "Time8b": "/home/Defects4J/resources/faulty_methods/Time/8"
+        },
+        "faulty_components_level": 0
+    },
+    "Time15b-Time16b": {
+        "coverage": "/home/Defects4J/data/Time-15b-16b.pkl",
+        "failing_tests": {
+            "Time15b": "/home/Defects4J/resources/failing_tests/Time/15",
+            "Time16b": "/home/Defects4J/resources/failing_tests/Time/16"
+        },
+        "faulty_components": {
+            "Time15b": "/home/Defects4J/resources/faulty_methods/Time/15",
+            "Time16b": "/home/Defects4J/resources/faulty_methods/Time/16"
+        },
+        "faulty_components_level": 0
+    },
+    "Time22b-Time23b": {
+        "coverage": "/home/Defects4J/data/Time-22b-23b.pkl",
+        "failing_tests": {
+            "Time22b": "/home/Defects4J/resources/failing_tests/Time/22",
+            "Time23b": "/home/Defects4J/resources/failing_tests/Time/23"
+        },
+        "faulty_components": {
+            "Time22b": "/home/Defects4J/resources/faulty_methods/Time/22",
+            "Time23b": "/home/Defects4J/resources/faulty_methods/Time/23"
+        },
+        "faulty_components_level": 0
+    },
+    "Time3b-Time4b": {
+        "coverage": "/home/Defects4J/data/Time-3b-4b.pkl",
+        "failing_tests": {
+            "Time3b": "/home/Defects4J/resources/failing_tests/Time/3",
+            "Time4b": "/home/Defects4J/resources/failing_tests/Time/4"
+        },
+        "faulty_components": {
+            "Time3b": "/home/Defects4J/resources/faulty_methods/Time/3",
+            "Time4b": "/home/Defects4J/resources/faulty_methods/Time/4"
+        },
+        "faulty_components_level": 0
+    },
+    "Time17b-Time18b": {
+        "coverage": "/home/Defects4J/data/Time-17b-18b.pkl",
+        "failing_tests": {
+            "Time17b": "/home/Defects4J/resources/failing_tests/Time/17",
+            "Time18b": "/home/Defects4J/resources/failing_tests/Time/18"
+        },
+        "faulty_components": {
+            "Time17b": "/home/Defects4J/resources/faulty_methods/Time/17",
+            "Time18b": "/home/Defects4J/resources/faulty_methods/Time/18"
+        },
+        "faulty_components_level": 0
+    },
+    "Time10b-Time11b": {
+        "coverage": "/home/Defects4J/data/Time-10b-11b.pkl",
+        "failing_tests": {
+            "Time10b": "/home/Defects4J/resources/failing_tests/Time/10",
+            "Time11b": "/home/Defects4J/resources/failing_tests/Time/11"
+        },
+        "faulty_components": {
+            "Time10b": "/home/Defects4J/resources/faulty_methods/Time/10",
+            "Time11b": "/home/Defects4J/resources/faulty_methods/Time/11"
+        },
+        "faulty_components_level": 0
+    },
+    "Time24b-Time25b": {
+        "coverage": "/home/Defects4J/data/Time-24b-25b.pkl",
+        "failing_tests": {
+            "Time24b": "/home/Defects4J/resources/failing_tests/Time/24",
+            "Time25b": "/home/Defects4J/resources/failing_tests/Time/25"
+        },
+        "faulty_components": {
+            "Time24b": "/home/Defects4J/resources/faulty_methods/Time/24",
+            "Time25b": "/home/Defects4J/resources/faulty_methods/Time/25"
+        },
+        "faulty_components_level": 0
+    }
+}

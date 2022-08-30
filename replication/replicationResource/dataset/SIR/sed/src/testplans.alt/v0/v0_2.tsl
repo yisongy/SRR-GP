@@ -1,0 +1,126 @@
+# Test specification for sed v0
+# version 0.2
+# by KYLE R. MURPHY
+# June 2006
+
+
+# command line arguments for sed
+COMMAND LINE OPTIONS:
+        output control:
+                -n.   					[property Suppress]
+		--quiet.				[single]
+		--silent.				[single]
+                none.                                   [property NoSuppress]
+
+        version:
+                -V.                                     [single]
+		--version.				[single]
+
+        command source:
+		no occurance.				[single]
+                -e, one occurance.                      [property Command]
+                -e, multiple occurances.                [single]
+                -f, one occurance.                      [property Script]
+                -f, multiple occurances.                [single]
+		-e and -f, both command and script.	[single]
+		--expression=.				[single]
+		--file=.				[single]		
+
+# partition of input sources
+SCRIPT/COMMAND INPUT SOURCE:
+        script type:
+                single script.	                        [if Script]
+		no script file.              		[error]
+		single sed command.			[if Command] 
+		no sed command.				[error]
+		blank sed command.			[single]
+
+        script file:
+                file exists.                            [if Script] [property ScriptFile_Exist]
+                file does not exist.                    [error]
+                omitted.                                [error]
+		multiple commands on one line.		[single]
+                improper spacing between commands.      [error]
+                no closing bracket.                     [error]
+		open > 10 write file handles.		[error]
+
+# partition of various commands
+STREAM EDITING COMMANDS:
+       	main edits:
+                delete (d).                             [property delete, P_Flaggable]
+		Delete (D).				[if Script] [property Delete, P_Flaggable]
+		substitute (s).				[property Substitute, G_Flaggable, P_Flaggable]
+		s/d.					[property delete, Substitute, G_Flaggable, P_Flaggable]
+		s/D.					[property Delete, Substitute, G_Flaggable, P_Flaggable]
+		none.					[if Script]
+			
+	other:
+                append (a).                             [if Script] [property Append, P_Flaggable]
+                insert (i).                             [if Script] [property Insert, P_Flaggable]
+                change (c).                             [if Script] [property Change, P_Flaggable]
+                list (l).                               [if Script] [property List, P_Flaggable]
+                transform (y).                          [if Script] [property Transform, P_Flaggable]
+                file read (r file). 			[if Script] [property Read]
+                file write (w file). 			[if Script] [property Write] 
+                quit (q).				[if Script] [property Quit] 
+		none.					[if Script]
+
+        flags and options:
+                global (g):
+                        on.		                [if G_Flaggable] [property Global]
+
+                print (p, P):
+                        print on.                       [if Suppress && P_Flaggable] [property print]
+                        Print on.			[if Script && Suppress && P_Flaggable] [property Print]
+			off.                      	[if NoSuppress] [property print_OFF]
+
+                nth occurance (n):
+                       	on.              	        [if Substitute && !Global] [property nth]
+
+		write to file flag (w):
+			on.				[if Substitute && !Write] [property w]
+
+		next (n, N):
+			next.				[if Script] [property next_ON]		
+			Next.				[if Script] [property Next_ON]
+			n/N.				[single]
+
+		line number (=):
+			on.				[single]
+
+	advanced editing:		
+		hold (h/H) and get (g/G):
+			hold/get.			[single]
+			hold/Get.			[single]
+			Hold/get.			[single]
+			Hold/Get.			[single]
+			hold/get w/ swap (x). 		[single]
+		
+		control flow:
+			single branch.			[single]
+			multi branch.			[single]
+			single test.			[single]
+			multi test.			[single]
+			nested branch and test.		[single]
+
+
+
+# partition of input file states
+INPUT FILE:
+        input file:
+                file exists.                            
+                file does not exist.                    [error]
+
+        number of input file(s):
+                none.                                   [error]
+                single file.                            
+                multiple files.                         [single]                         
+
+	line length:
+		>4000 bytes.				[error]
+		(0-4000) bytes.	
+	
+        file type:
+                binary file.                            [single]
+                normal text file.                       [property InFile_Good]
+

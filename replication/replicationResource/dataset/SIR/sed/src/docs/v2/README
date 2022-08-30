@@ -1,0 +1,71 @@
+* THE STATUS OF GNU SED
+
+It has long been noted that GNU sed is much slower than other
+implementations.  The current bottleneck is the way sed reads and
+writes data files.  It should read large blocks at a time (or even map
+files, where that is supported).  When possible, it should avoid
+copying it's input from one place in memory to another.  Patches to
+make it do those things are welcome!
+
+
+
+* ABOUT BUGS
+
+Before reporting a bug, please check the list of oft-reported non-bugs
+(below).
+
+Bugs and comments may be sent to bug-gnu-utils@prep.ai.mit.edu.
+
+Please do not send a bug report like this:
+
+	[while building frobme-1.3.4] 
+	$ configure 
+	sed: file sedscr line 1: Unknown option to 's'
+	$ sed --version
+	GNU sed version 2.04
+
+If GNU sed doesn't configure your favorite package, take a few extra
+minutes to identify the specific problem and make a stand-alone test
+case.
+
+A stand-alone test case includes all the data necessary to perform the
+test, and the specific invocation of sed that causes the problem.  The
+smaller a stand-alone test case is, the better.  A test case should
+not involve something as far removed from sed as ``try to configure
+frobme-1.3.2''.  Yes, that is in principle enough information to look
+for the bug, but that is not a very practical prospect.
+
+
+
+& NONBUGS
+
+ `sed -n' and `s/regex/replace/p'
+
+Some versions of sed ignore the `p' (print) option of an `s' command
+unless the `-n' command switch has been specified.  Other versions
+always honor the `p' option.  GNU sed is the latter sort.
+
+
+ regexp syntax clashes
+
+GNU sed uses the Posix basic regular expression syntax.  According to
+the standard, the meaning of some escape sequences is undefined in
+this syntax;  notably  `\|' and `\+'.
+
+As in all GNU programs that use Posix basic regular expressions, sed
+interprets these escape sequences as meta-characters.  So, `x\+'
+matches one or more occurences of `x'.   `abc\|def' matches either
+`abc' or `def'.
+
+This syntax may cause problems when running scripts written for other
+seds.  Some sed programs have been written with the assumption that
+`\|' and `\+' match the literal characters `|' and `+'.  Such scripts
+must be modified by removing the spurious backslashes if they are to
+be used with GNU sed.
+
+[If you have need of a free sed that understands the regexp
+ syntax of your choice, the source to GNU sed may be a good place to
+ start.  Consider changing the call to re_set_syntax in function main
+ in `sed.c'.  The file regex.h contains an explanation of the
+ supported syntax options.]
+

@@ -1,0 +1,72 @@
+{
+    "Math78b-Math79b-Math80b": {
+        "coverage": "/home/Defects4J/data/Math-78b-79b-80b.pkl",
+        "failing_tests": {
+            "Math78b": "/home/Defects4J/resources/failing_tests/Math/78",
+            "Math79b": "/home/Defects4J/resources/failing_tests/Math/79",
+            "Math80b": "/home/Defects4J/resources/failing_tests/Math/80"
+        },
+        "faulty_components": {
+            "Math78b": "/home/Defects4J/resources/faulty_methods/Math/78",
+            "Math79b": "/home/Defects4J/resources/faulty_methods/Math/79",
+            "Math80b": "/home/Defects4J/resources/faulty_methods/Math/80"
+        },
+        "faulty_components_level": 0
+    },
+    "Math99b-Math100b-Math101b": {
+        "coverage": "/home/Defects4J/data/Math-99b-100b-101b.pkl",
+        "failing_tests": {
+            "Math99b": "/home/Defects4J/resources/failing_tests/Math/99",
+            "Math100b": "/home/Defects4J/resources/failing_tests/Math/100",
+            "Math101b": "/home/Defects4J/resources/failing_tests/Math/101"
+        },
+        "faulty_components": {
+            "Math99b": "/home/Defects4J/resources/faulty_methods/Math/99",
+            "Math100b": "/home/Defects4J/resources/faulty_methods/Math/100",
+            "Math101b": "/home/Defects4J/resources/faulty_methods/Math/101"
+        },
+        "faulty_components_level": 0
+    },
+    "Math95b-Math96b-Math97b": {
+        "coverage": "/home/Defects4J/data/Math-95b-96b-97b.pkl",
+        "failing_tests": {
+            "Math95b": "/home/Defects4J/resources/failing_tests/Math/95",
+            "Math96b": "/home/Defects4J/resources/failing_tests/Math/96",
+            "Math97b": "/home/Defects4J/resources/failing_tests/Math/97"
+        },
+        "faulty_components": {
+            "Math95b": "/home/Defects4J/resources/faulty_methods/Math/95",
+            "Math96b": "/home/Defects4J/resources/faulty_methods/Math/96",
+            "Math97b": "/home/Defects4J/resources/faulty_methods/Math/97"
+        },
+        "faulty_components_level": 0
+    },
+    "Math30b-Math31b-Math32b": {
+        "coverage": "/home/Defects4J/data/Math-30b-31b-32b.pkl",
+        "failing_tests": {
+            "Math30b": "/home/Defects4J/resources/failing_tests/Math/30",
+            "Math31b": "/home/Defects4J/resources/failing_tests/Math/31",
+            "Math32b": "/home/Defects4J/resources/failing_tests/Math/32"
+        },
+        "faulty_components": {
+            "Math30b": "/home/Defects4J/resources/faulty_methods/Math/30",
+            "Math31b": "/home/Defects4J/resources/faulty_methods/Math/31",
+            "Math32b": "/home/Defects4J/resources/faulty_methods/Math/32"
+        },
+        "faulty_components_level": 0
+    },
+    "Math72b-Math73b-Math74b": {
+        "coverage": "/home/Defects4J/data/Math-72b-73b-74b.pkl",
+        "failing_tests": {
+            "Math72b": "/home/Defects4J/resources/failing_tests/Math/72",
+            "Math73b": "/home/Defects4J/resources/failing_tests/Math/73",
+            "Math74b": "/home/Defects4J/resources/failing_tests/Math/74"
+        },
+        "faulty_components": {
+            "Math72b": "/home/Defects4J/resources/faulty_methods/Math/72",
+            "Math73b": "/home/Defects4J/resources/faulty_methods/Math/73",
+            "Math74b": "/home/Defects4J/resources/faulty_methods/Math/74"
+        },
+        "faulty_components_level": 0
+    }
+}

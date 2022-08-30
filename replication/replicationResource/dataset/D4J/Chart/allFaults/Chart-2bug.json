@@ -1,0 +1,122 @@
+{
+    "Chart11b-Chart12b": {
+        "coverage": "/home/Defects4J/data/Chart-11b-12b.pkl",
+        "failing_tests": {
+            "Chart11b": "/home/Defects4J/resources/failing_tests/Chart/11",
+            "Chart12b": "/home/Defects4J/resources/failing_tests/Chart/12"
+        },
+        "faulty_components": {
+            "Chart11b": "/home/Defects4J/resources/faulty_methods/Chart/11",
+            "Chart12b": "/home/Defects4J/resources/faulty_methods/Chart/12"
+        },
+        "faulty_components_level": 0
+    },
+    "Chart14b-Chart15b": {
+        "coverage": "/home/Defects4J/data/Chart-14b-15b.pkl",
+        "failing_tests": {
+            "Chart14b": "/home/Defects4J/resources/failing_tests/Chart/14",
+            "Chart15b": "/home/Defects4J/resources/failing_tests/Chart/15"
+        },
+        "faulty_components": {
+            "Chart14b": "/home/Defects4J/resources/faulty_methods/Chart/14",
+            "Chart15b": "/home/Defects4J/resources/faulty_methods/Chart/15"
+        },
+        "faulty_components_level": 0
+    },
+    "Chart17b-Chart18b": {
+        "coverage": "/home/Defects4J/data/Chart-17b-18b.pkl",
+        "failing_tests": {
+            "Chart17b": "/home/Defects4J/resources/failing_tests/Chart/17",
+            "Chart18b": "/home/Defects4J/resources/failing_tests/Chart/18"
+        },
+        "faulty_components": {
+            "Chart17b": "/home/Defects4J/resources/faulty_methods/Chart/17",
+            "Chart18b": "/home/Defects4J/resources/faulty_methods/Chart/18"
+        },
+        "faulty_components_level": 0
+    },
+    "Chart19b-Chart20b": {
+        "coverage": "/home/Defects4J/data/Chart-19b-20b.pkl",
+        "failing_tests": {
+            "Chart19b": "/home/Defects4J/resources/failing_tests/Chart/19",
+            "Chart20b": "/home/Defects4J/resources/failing_tests/Chart/20"
+        },
+        "faulty_components": {
+            "Chart19b": "/home/Defects4J/resources/faulty_methods/Chart/19",
+            "Chart20b": "/home/Defects4J/resources/faulty_methods/Chart/20"
+        },
+        "faulty_components_level": 0
+    },
+    "Chart10b-Chart11b": {
+        "coverage": "/home/Defects4J/data/Chart-10b-11b.pkl",
+        "failing_tests": {
+            "Chart10b": "/home/Defects4J/resources/failing_tests/Chart/10",
+            "Chart11b": "/home/Defects4J/resources/failing_tests/Chart/11"
+        },
+        "faulty_components": {
+            "Chart10b": "/home/Defects4J/resources/faulty_methods/Chart/10",
+            "Chart11b": "/home/Defects4J/resources/faulty_methods/Chart/11"
+        },
+        "faulty_components_level": 0
+    },
+    "Chart3b-Chart4b": {
+        "coverage": "/home/Defects4J/data/Chart-3b-4b.pkl",
+        "failing_tests": {
+            "Chart3b": "/home/Defects4J/resources/failing_tests/Chart/3",
+            "Chart4b": "/home/Defects4J/resources/failing_tests/Chart/4"
+        },
+        "faulty_components": {
+            "Chart3b": "/home/Defects4J/resources/faulty_methods/Chart/3",
+            "Chart4b": "/home/Defects4J/resources/faulty_methods/Chart/4"
+        },
+        "faulty_components_level": 0
+    },
+    "Chart8b-Chart9b": {
+        "coverage": "/home/Defects4J/data/Chart-8b-9b.pkl",
+        "failing_tests": {
+            "Chart8b": "/home/Defects4J/resources/failing_tests/Chart/8",
+            "Chart9b": "/home/Defects4J/resources/failing_tests/Chart/9"
+        },
+        "faulty_components": {
+            "Chart8b": "/home/Defects4J/resources/faulty_methods/Chart/8",
+            "Chart9b": "/home/Defects4J/resources/faulty_methods/Chart/9"
+        },
+        "faulty_components_level": 0
+    },
+    "Chart7b-Chart8b": {
+        "coverage": "/home/Defects4J/data/Chart-7b-8b.pkl",
+        "failing_tests": {
+            "Chart7b": "/home/Defects4J/resources/failing_tests/Chart/7",
+            "Chart8b": "/home/Defects4J/resources/failing_tests/Chart/8"
+        },
+        "faulty_components": {
+            "Chart7b": "/home/Defects4J/resources/faulty_methods/Chart/7",
+            "Chart8b": "/home/Defects4J/resources/faulty_methods/Chart/8"
+        },
+        "faulty_components_level": 0
+    },
+    "Chart9b-Chart10b": {
+        "coverage": "/home/Defects4J/data/Chart-9b-10b.pkl",
+        "failing_tests": {
+            "Chart9b": "/home/Defects4J/resources/failing_tests/Chart/9",
+            "Chart10b": "/home/Defects4J/resources/failing_tests/Chart/10"
+        },
+        "faulty_components": {
+            "Chart9b": "/home/Defects4J/resources/faulty_methods/Chart/9",
+            "Chart10b": "/home/Defects4J/resources/faulty_methods/Chart/10"
+        },
+        "faulty_components_level": 0
+    },
+    "Chart21b-Chart22b": {
+        "coverage": "/home/Defects4J/data/Chart-21b-22b.pkl",
+        "failing_tests": {
+            "Chart21b": "/home/Defects4J/resources/failing_tests/Chart/21",
+            "Chart22b": "/home/Defects4J/resources/failing_tests/Chart/22"
+        },
+        "faulty_components": {
+            "Chart21b": "/home/Defects4J/resources/faulty_methods/Chart/21",
+            "Chart22b": "/home/Defects4J/resources/faulty_methods/Chart/22"
+        },
+        "faulty_components_level": 0
+    }
+}

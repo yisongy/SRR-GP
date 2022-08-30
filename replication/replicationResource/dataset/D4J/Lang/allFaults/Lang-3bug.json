@@ -1,0 +1,72 @@
+{
+    "Lang52b-Lang53b-Lang54b": {
+        "coverage": "/home/Defects4J/data/Lang-52b-53b-54b.pkl",
+        "failing_tests": {
+            "Lang52b": "/home/Defects4J/resources/failing_tests/Lang/52",
+            "Lang53b": "/home/Defects4J/resources/failing_tests/Lang/53",
+            "Lang54b": "/home/Defects4J/resources/failing_tests/Lang/54"
+        },
+        "faulty_components": {
+            "Lang52b": "/home/Defects4J/resources/faulty_methods/Lang/52",
+            "Lang53b": "/home/Defects4J/resources/faulty_methods/Lang/53",
+            "Lang54b": "/home/Defects4J/resources/faulty_methods/Lang/54"
+        },
+        "faulty_components_level": 0
+    },
+    "Lang17b-Lang18b-Lang19b": {
+        "coverage": "/home/Defects4J/data/Lang-17b-18b-19b.pkl",
+        "failing_tests": {
+            "Lang17b": "/home/Defects4J/resources/failing_tests/Lang/17",
+            "Lang18b": "/home/Defects4J/resources/failing_tests/Lang/18",
+            "Lang19b": "/home/Defects4J/resources/failing_tests/Lang/19"
+        },
+        "faulty_components": {
+            "Lang17b": "/home/Defects4J/resources/faulty_methods/Lang/17",
+            "Lang18b": "/home/Defects4J/resources/faulty_methods/Lang/18",
+            "Lang19b": "/home/Defects4J/resources/faulty_methods/Lang/19"
+        },
+        "faulty_components_level": 0
+    },
+    "Lang42b-Lang43b-Lang44b": {
+        "coverage": "/home/Defects4J/data/Lang-42b-43b-44b.pkl",
+        "failing_tests": {
+            "Lang42b": "/home/Defects4J/resources/failing_tests/Lang/42",
+            "Lang43b": "/home/Defects4J/resources/failing_tests/Lang/43",
+            "Lang44b": "/home/Defects4J/resources/failing_tests/Lang/44"
+        },
+        "faulty_components": {
+            "Lang42b": "/home/Defects4J/resources/faulty_methods/Lang/42",
+            "Lang43b": "/home/Defects4J/resources/faulty_methods/Lang/43",
+            "Lang44b": "/home/Defects4J/resources/faulty_methods/Lang/44"
+        },
+        "faulty_components_level": 0
+    },
+    "Lang41b-Lang42b-Lang43b": {
+        "coverage": "/home/Defects4J/data/Lang-41b-42b-43b.pkl",
+        "failing_tests": {
+            "Lang41b": "/home/Defects4J/resources/failing_tests/Lang/41",
+            "Lang42b": "/home/Defects4J/resources/failing_tests/Lang/42",
+            "Lang43b": "/home/Defects4J/resources/failing_tests/Lang/43"
+        },
+        "faulty_components": {
+            "Lang41b": "/home/Defects4J/resources/faulty_methods/Lang/41",
+            "Lang42b": "/home/Defects4J/resources/faulty_methods/Lang/42",
+            "Lang43b": "/home/Defects4J/resources/faulty_methods/Lang/43"
+        },
+        "faulty_components_level": 0
+    },
+    "Lang27b-Lang28b-Lang29b": {
+        "coverage": "/home/Defects4J/data/Lang-27b-28b-29b.pkl",
+        "failing_tests": {
+            "Lang27b": "/home/Defects4J/resources/failing_tests/Lang/27",
+            "Lang28b": "/home/Defects4J/resources/failing_tests/Lang/28",
+            "Lang29b": "/home/Defects4J/resources/failing_tests/Lang/29"
+        },
+        "faulty_components": {
+            "Lang27b": "/home/Defects4J/resources/faulty_methods/Lang/27",
+            "Lang28b": "/home/Defects4J/resources/faulty_methods/Lang/28",
+            "Lang29b": "/home/Defects4J/resources/faulty_methods/Lang/29"
+        },
+        "faulty_components_level": 0
+    }
+}

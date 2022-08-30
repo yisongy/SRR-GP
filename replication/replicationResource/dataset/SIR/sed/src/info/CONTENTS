@@ -1,0 +1,17 @@
+**************************************************************
+This directory contains subdirectorys v0 through vK
+for the various versions of sed in the repository.
+
+Each directory contains fault matrices for each
+of the versions.
+
+REALFAULT file contains information about the real faults
+within the various versions.
+
+These REAL faults were discovered by running "newer"
+versions of the sed smoke testsuite against "older"
+releases of sed.
+
+Note that the REAL fault versions in no way correlate
+to the embedded fault versions!
+**************************************************************

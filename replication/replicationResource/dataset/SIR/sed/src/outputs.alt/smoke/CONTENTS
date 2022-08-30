@@ -1,0 +1,6 @@
+This directory contains the original .good outputs
+from the testsuite that accompanied sed v7.
+
+Please note that we have mapped the named files
+to sequentially numbered files according to the
+file TESTNUMS.

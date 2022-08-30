@@ -1,0 +1,8 @@
+This directory will contain permanent outputs from the subject.
+
+Also, provided in this directory are the original "good" outputs
+from the testsuite that accompanied the v7 version of sed.
+The directory "smoke" contains these outputs.  Use this
+directory if you wish to investigate the "real" (i.e.
+not-seeded) faults within the sed versions.
+
