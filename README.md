@@ -61,7 +61,7 @@ The mapping relationship between the modules in the framework and the source cod
 
 `Next Generation`: **[getNextGeneration.py](replication/replicationResource/code/exp/getNextGeneration.py)**
 
-The framework is built upon **[DEAP](https://github.com/DEAP/deap)**.
+The framework is built upon an existing evolutionary computation framework, **[DEAP](https://github.com/DEAP/deap)**.
 
 
 # 4 Experiment
